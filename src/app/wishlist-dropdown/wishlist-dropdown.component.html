@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary nav-dropdown" (click)='renderWishList()' id="dropdownBasic1" ngbDropdownToggle><i class="fa fa-heart"></i></button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+         <div class="container-fluid col-lg-12 product-list">
+            <div class="col-lg-12" *ngFor="let product of wishList">
+                <div class="product-list-grid col-lg-6 image-section">
+                    <img class="mob-image" [src]="product.imageUrl">
+                </div>                  
+                <div class="product-list-grid col-lg-6 product-info">
+                        <div class="h4"><span>{{product.productName}}</span></div>
+                        <div class="price"><span>{{product.price | currency:'INR': true}}</span></div>
+
+                        <div class="quantity col-lg-5">
+                            <button type="button" (click)='decrementItem($event)'>-</button>
+                            <span>1</span>
+                            <button type="button" (click)='incrementItem()'>+</button>
+                        </div> 
+                </div>
+            </div>
+
+            <span *ngIf='!isWishlistEmpty' class="col-lg-12 clear-all-text" (click)='clearWishList()'><a>Clear all</a></span>
+            <div *ngIf='isWishlistEmpty' class="col-lg-12">
+                Save the Products you like here
+            </div>
+            <div class="col-lg-12"><button type="button" title="" class="col-lg-10 col-lg-offset-1 go-to-cart-button">Go to my Cart</button></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

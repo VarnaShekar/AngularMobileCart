@@ -1,0 +1,18 @@
+.nav-right{
+	position: relative;
+    float: right;
+    width: auto;
+    display: inline-block;
+}
+.navbar{
+	margin-bottom: 0px;
+}
+.navbar-brand{
+	color:#000;
+}
+.wishlist-drop-down-content{
+	display: block;
+}
+.wishlist-drop-down-content.show{
+	display: block;
+}

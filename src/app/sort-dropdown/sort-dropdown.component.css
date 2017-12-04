@@ -1,0 +1,21 @@
+.dropdown-menu form{
+	padding-left: 6px;
+}
+.dropdown-toggle{
+	width: 43px;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #696969;
+}
+.dropdown-toggle .dropdown-caret{
+	padding-left: 0px;
+    padding-right: 0px;
+    height: 15px;
+    
+}
+.dropdown-toggle .dropdown-caret .fa-caret-up{
+	line-height: 15px;
+}
+.dropdown-toggle .dropdown-caret .fa-caret-down{
+	line-height: 15px;
+}
